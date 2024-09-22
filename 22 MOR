@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Inicio de Primavera</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            color: #ff4500;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #ff69b4;
+            font-size: 36px;
+            margin-top: 0;
+        }
+
+        .flowers {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tulip {
+            width: 60px;
+            height: 150px;
+            position: relative;
+        }
+
+        .tulip .petal {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 60px solid yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .tulip .stem {
+            width: 8px;
+            height: 90px;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes sway {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        .tulip:hover {
+            animation: sway 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feliz inicio de la primavera</h1>
+        <h2>Te quiero mucho, cosita pechocha</h2>
+        <div class="flowers">
+            <div class="tulip">
+                <div class="petal"></div>
+                <div class="stem"></div>
+            </div>
+            <div class="tulip">
+                <div class="petal"></div>
+                <div class="stem"></div>
+            </div>
+            <div class="tulip">
+                <div class="petal"></div>
+                <div class="stem"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
